@@ -7,13 +7,13 @@ Este es un proyecto web desarrollado con **Java Spring Boot**, **JSP** y **MySQL
 ## 🖼️ Vista Previa
 
 ### 🔍 Lista de empleados
-![Lista de empleados](assets/img-general.png)
+![Lista de empleados](assets/img_general.png)
 
 ### ➕ Formulario de agregar
-![Formulario de agregar](assets/img-agregar.png)
+![Formulario de agregar](assets/img_agregar.png)
 
 ### ✏️ Formulario de edición
-![Formulario de editar](assets/img-editar.png)
+![Formulario de editar](assets/img_editar.png)
 
 ---
 
