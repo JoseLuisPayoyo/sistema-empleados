@@ -1,33 +1,75 @@
-# 🧑‍💼 Sistema de Gestión de Empleados (Spring Boot + JSP)
+# 📋 Sistema de Gestión de Empleados
 
-Aplicación web desarrollada en Java usando Spring Boot y JSPs que permite gestionar los empleados de una organización mediante operaciones CRUD. Esta app es ideal como proyecto formativo para aprender a integrar Spring Boot con vistas JSP y bases de datos relacionales.
+Este es un proyecto web desarrollado con **Java Spring Boot**, **JSP** y **MySQL**, que permite gestionar empleados de forma sencilla. El sistema incluye operaciones CRUD (Crear, Leer, Actualizar, Eliminar), conectando el backend con una base de datos relacional.
 
 ---
 
-## 🚀 Características
+## 🖼️ Vista Previa
 
-- Listado de empleados
-- Registro de nuevos empleados
-- Edición de empleados existentes
-- Eliminación de empleados
-- Validaciones básicas en formularios
-- Estilo visual básico con Bootstrap
-- Persistencia con base de datos relacional (MySQL o H2)
+### 🔍 Lista de empleados
+![Lista de empleados](./assets/img-general.png)
+
+### ➕ Formulario de agregar
+![Formulario de agregar](./assets/img-agregar.png)
+
+### ✏️ Formulario de edición
+![Formulario de editar](./assets/img-editar.png)
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Java 17+**
-- **Spring Boot 3**
-- **Spring MVC**
-- **Spring Data JPA**
-- **JSP**
-- **Bootstrap 5**
-- **Thymeleaf Layout Dialect** *(opcional, si combinas plantillas)*
-- **MySQL / H2**
-- **Maven**
+- Java 21
+- Spring Boot
+- Spring MVC
+- Spring Data JPA
+- JSP y JSTL
+- Bootstrap 5
+- MySQL
+- Maven
 
 ---
 
+## ⚙️ Funcionalidades
 
+- 🔍 **Listar empleados** con tabla visual e intuitiva.
+- ➕ **Agregar nuevo empleado** (nombre, departamento y sueldo).
+- ✏️ **Editar empleados existentes** con formulario precargado.
+- 🗑️ **Eliminar empleados** de forma rápida.
+- ✅ Validación y persistencia con JPA.
+- 💅 Estilizado con Bootstrap para una interfaz moderna.
+
+---
+
+## 🗃️ Estructura del proyecto
+
+sistema-empleados/
+├── src/
+│ ├── main/
+│ │ ├── java/payoyo/empleados/
+│ │ │ ├── controlador/
+│ │ │ ├── modelo/
+│ │ │ ├── repositorio/
+│ │ │ ├── servicio/
+│ │ │ └── EmpleadosApplication.java
+│ │ └── webapp/WEB-INF/views/
+│ │ ├── index.jsp
+│ │ ├── agregar.jsp
+│ │ └── editar.jsp
+└── pom.xml
+
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/sistema-empleados.git
+cd sistema-empleados
+
+---
+### 📌 Autor
+Desarrollado por Jose Luis Rodríguez
+Contacto: josepayoyo2003@gmail.com
