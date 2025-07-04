@@ -44,18 +44,30 @@ Este es un proyecto web desarrollado con **Java Spring Boot**, **JSP** y **MySQL
 ## 🗃️ Estructura del proyecto
 
 sistema-empleados/
+
 ├── src/
+
 │ ├── main/
+
 │ │ ├── java/payoyo/empleados/
+
 │ │ │ ├── controlador/
+
 │ │ │ ├── modelo/
-│ │ │ ├── repositorio/
+│ │ │ ├── repositorio
+/
 │ │ │ ├── servicio/
+
 │ │ │ └── EmpleadosApplication.java
+
 │ │ └── webapp/WEB-INF/views/
+
 │ │ ├── index.jsp
+
 │ │ ├── agregar.jsp
+
 │ │ └── editar.jsp
+
 └── pom.xml
 
 
