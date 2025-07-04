@@ -6,10 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import payoyo.empleados.modelo.Empleado;
 import payoyo.empleados.servicio.EmpleadoServicio;
 
@@ -40,6 +37,29 @@ public class IndexControlador {
     public String agregar(@ModelAttribute("empleadoForma") Empleado empleado, HttpServletRequest request){
         logger.info("Empleado a agregar: " + empleado);
         empleadoServicio.guardarEmpleado(empleado);
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/editar", method = RequestMethod.GET)
+    public String mostrarEditar(@RequestParam int idEmpleado, ModelMap modelo) {
+        Empleado empleado = empleadoServicio.buscarEmpleadoPorId(idEmpleado);
+        logger.info("empleado a editar: " + empleado);
+        modelo.put("empleado", empleado);
+        return "editar";
+    }
+
+    @RequestMapping(value = "/editar", method = RequestMethod.POST)
+    public String editar(@ModelAttribute("empleadoForma") Empleado empleado){
+        logger.info("Empleado a editar: " + empleado);
+        empleadoServicio.guardarEmpleado(empleado);
+        return "redirect:/";
+    }
+
+    @RequestMapping(value = "/eliminar", method = RequestMethod.GET)
+    public String eliminar(@RequestParam int idEmpleado) {
+        Empleado empleado = new Empleado();
+        empleado.setIdEmpleado(idEmpleado);
+        empleadoServicio.eliminarEmpleado(empleado);
         return "redirect:/";
     }
     

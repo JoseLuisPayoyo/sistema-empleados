@@ -30,10 +30,16 @@
                     <td class="text-center">
                         <c:set var="urlEditar">
                             <c:url value="${application.contextPath}/editar" >
-                                <c:param name="id" value="${empleado.idEmpleado}" />
+                                <c:param name="idEmpleado" value="${empleado.idEmpleado}" />
                             </c:url>
                         </c:set>
                         <a href="${urlEditar}" class="btn btn-warning btn-sm me-2">Editar</a>
+                        <c:set var="urlEliminar">
+                            <c:url value="${application.contextPath}/eliminar" >
+                                <c:param name="idEmpleado" value="${empleado.idEmpleado}" />
+                            </c:url>
+                        </c:set>
+                        <a href="${urlEliminar}" class="btn btn-danger btn-sm me-2">Eliminar</a>
                     </td>
                 </tr>
             </c:forEach>
